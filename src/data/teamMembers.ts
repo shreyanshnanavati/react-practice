@@ -1,0 +1,10 @@
+export const teamMembers = [{"id":1,"first_name":"Mirabella","last_name":"Treend","email":"mtreend0@networkadvertising.org","gender":"Female","ip_address":"14.204.130.26"},
+{"id":2,"first_name":"Ingrid","last_name":"Forder","email":"iforder1@mapy.cz","gender":"Female","ip_address":"99.218.251.245"},
+{"id":3,"first_name":"Becka","last_name":"Coalbran","email":"bcoalbran2@answers.com","gender":"Female","ip_address":"54.6.18.181"},
+{"id":4,"first_name":"Nadean","last_name":"Cartwright","email":"ncartwright3@taobao.com","gender":"Female","ip_address":"179.97.113.24"},
+{"id":5,"first_name":"Caressa","last_name":"Rainy","email":"crainy4@deviantart.com","gender":"Female","ip_address":"138.185.122.44"},
+{"id":6,"first_name":"Anastassia","last_name":"Dowzell","email":"adowzell5@comcast.net","gender":"Female","ip_address":"67.71.59.135"},
+{"id":7,"first_name":"Shanan","last_name":"Syder","email":"ssyder6@bbb.org","gender":"Male","ip_address":"76.200.111.26"},
+{"id":8,"first_name":"Tremayne","last_name":"Guage","email":"tguage7@state.gov","gender":"Male","ip_address":"196.187.58.70"},
+{"id":9,"first_name":"Lance","last_name":"Linfitt","email":"llinfitt8@adobe.com","gender":"Male","ip_address":"227.147.251.11"},
+{"id":10,"first_name":"Phyllys","last_name":"Sargison","email":"psargison9@php.net","gender":"Female","ip_address":"68.3.27.34"}]
