@@ -5,7 +5,7 @@ import { Dispatch, SetStateAction } from "react";
 type Transaction = {
   title: string;
   category: string;
-  expense: string;
+  expense: number;
 };
 
 // 2. Type the props
@@ -16,12 +16,13 @@ export default function ExpenseForm({setRecentTransactions} : Props) {
   const [formData, setFormData] = useState<Transaction>({
     title: "",
     category: "",
-    expense: "",
+    expense: 0,
   });
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     console.log(formData);
     setRecentTransactions((prevTransactions) => [...prevTransactions,formData])
+    setFormData({ title: "", category: "", expense: 0 });
   }
   return (
     <form className="space-y-4 max-w-md" onSubmit={handleSubmit}>
@@ -68,7 +69,7 @@ export default function ExpenseForm({setRecentTransactions} : Props) {
           name="expense"
           value={formData.expense}
           onChange={(e) =>
-            setFormData({ ...formData, [e.target.name]: e.target.value })
+            setFormData({ ...formData, [e.target.name]: parseFloat(e.target.value) })
           }
         />
       </div>

@@ -3,11 +3,12 @@ import ExpenseForm from '../components/ExpenseForm';
 type Transaction = {
   title: string;
   category: string;
-  expense: string;
+  expense: number;
 }
 
 export default function UseState() {
   const [recentTransactions, setRecentTransactions] = useState<Transaction[]>([])
+  let totalExpense = recentTransactions.reduce((acc, curr) => acc + curr.expense, 0);
   return (
     <div>
       <div className="h-screen flex ">
@@ -16,13 +17,15 @@ export default function UseState() {
             <ExpenseForm setRecentTransactions = {setRecentTransactions} />
           </div>
         </div>
-        <div className="flex-1 bg-teal-600">
+        <div className="flex-1 bg-gray-200">
           <div className="h-screen flex flex-col">
-            <div className="flex-1 p-4  bg-teal-800">
+            <div className="flex-1 p-4  bg-gray-200">
               <h2 className="text-2xl"> Summary </h2>
-              <div className="mt-5"> Total Spent </div>
+              <div className="mt-5"> 
+                Total Spent: ₹{totalExpense}
+                </div>
             </div>
-            <div className="flex-2 p-4  bg-teal-500">
+            <div className="flex-2 p-4  bg-gray-300">
               <h2 className="text-2xl"> Recent Transactions</h2>
               { recentTransactions.length !== 0 ? 
                 recentTransactions.map(({title,category,expense}) =>{
