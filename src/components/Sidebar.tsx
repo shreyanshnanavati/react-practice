@@ -1,5 +1,3 @@
-import { useState } from 'react'
-
 type ChapterKey = 'ComponentComposition' | 'UseState';
 
 const chapters : {key:ChapterKey,label:string}[] = [
@@ -13,7 +11,7 @@ export default function Sidebar({selectedChapter, setChapter} : {selectedChapter
       <div className='flex flex-col gap-2'>
         {chapters.map(({key,label}) => {
           return (
-            <div className={`p-4 ${key === selectedChapter ? "bg-gray-600" : "bg-gray-400"} rounded hover:bg-gray-600 transition`} onClick={() => setChapter(key)}>{label}</div>
+            <div key={key} className={`p-4 ${key === selectedChapter ? "bg-gray-600" : "bg-gray-400"} rounded hover:bg-gray-600 transition`} onClick={() => setChapter(key)}>{label}</div>
           )
         })}
       </div>

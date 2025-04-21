@@ -1,7 +1,19 @@
 import { useState } from "react";
+import { Dispatch, SetStateAction } from "react";
 
-export default function ExpenseForm() {
-  const [formData, setFormData] = useState({
+// 1. Define the shape of a Transaction
+type Transaction = {
+  title: string;
+  category: string;
+  expense: string;
+};
+
+// 2. Type the props
+type Props = {
+  setRecentTransactions: Dispatch<SetStateAction<Transaction[]>>;
+};
+export default function ExpenseForm({setRecentTransactions} : Props) {
+  const [formData, setFormData] = useState<Transaction>({
     title: "",
     category: "",
     expense: "",
@@ -9,6 +21,7 @@ export default function ExpenseForm() {
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     console.log(formData);
+    setRecentTransactions((prevTransactions) => [...prevTransactions,formData])
   }
   return (
     <form className="space-y-4 max-w-md" onSubmit={handleSubmit}>
