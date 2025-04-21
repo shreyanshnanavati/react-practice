@@ -12,7 +12,7 @@ function App() {
       <div className='min-h-screen flex flex-col'>
         <Navbar/>
         <div className="flex flex-1">
-          <Sidebar selectedChapter = {chapter} changeChapter = {setChapter}/>
+          <Sidebar selectedChapter = {chapter} setChapter = {setChapter}/>
           <MainContent selectedChapter={chapter}/>
         </div>
       </div>
