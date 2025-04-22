@@ -15,7 +15,6 @@ export default function UseEffect(){
       })
       const jokeRes = await res.json()
       setJoke(jokeRes.joke)
-      setLoading(false)
     } catch (error) {
       setJoke("Oops! cant fetch the joke")
       console.log(error)

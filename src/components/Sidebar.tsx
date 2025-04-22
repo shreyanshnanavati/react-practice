@@ -8,7 +8,7 @@ const chapters : {key:ChapterKey,label:string}[] = [
 
 export default function Sidebar({selectedChapter, setChapter} : {selectedChapter: string, setChapter: any}) {
   return (
-    <aside className='w-64 bg-gray-100 p-4 text-black'>
+    <aside className='w-64 bg-gray-100 dark:bg-gray-600 p-4 text-black'>
       <div className='flex flex-col gap-2'>
         {chapters.map(({key,label}) => {
           return (
