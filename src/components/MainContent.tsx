@@ -14,7 +14,7 @@ export default function MainContent({selectedChapter} : {selectedChapter: Chapte
   };  
   
   return (
-    <main className="flex-1 bg-white p-6 text-black">
+    <main className="flex-1 bg-gray-50 dark:bg-gray-950 p-6 text-gray-900 dark:text-gray-100">
       {lessonMap[selectedChapter]}
     </main>
   );

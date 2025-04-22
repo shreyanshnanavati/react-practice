@@ -73,7 +73,7 @@ export default function ExpenseForm({setRecentTransactions} : Props) {
           }
         />
       </div>
-      <button className="bg-black text-white p-2 rounded">Submit</button>
+      <button className="bg-blue-500 dark:bg-blue-400 text-white p-2 rounded">Submit</button>
     </form>
   );
 }

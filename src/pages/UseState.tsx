@@ -17,15 +17,15 @@ export default function UseState() {
             <ExpenseForm setRecentTransactions = {setRecentTransactions} />
           </div>
         </div>
-        <div className="flex-1 bg-gray-200">
+        <div className="flex-1 ">
           <div className="h-screen flex flex-col">
-            <div className="flex-1 p-4  bg-gray-200">
+            <div className="flex-1 p-4  ">
               <h2 className="text-2xl"> Summary </h2>
               <div className="mt-5"> 
                 Total Spent: ₹{totalExpense}
                 </div>
             </div>
-            <div className="flex-2 p-4  bg-gray-300">
+            <div className="flex-2 p-4  ">
               <h2 className="text-2xl"> Recent Transactions</h2>
               { recentTransactions.length !== 0 ? 
                 recentTransactions.map(({title,category,expense}) =>{

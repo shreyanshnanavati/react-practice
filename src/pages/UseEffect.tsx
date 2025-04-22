@@ -34,9 +34,9 @@ export default function UseEffect(){
   }
 
   return (
-    <div className='bg-gray-200 h-screen p-4 flex justify-center items-center'>
+    <div className='h-screen p-4 flex justify-center items-center'>
       
-      <div className='p-4 bg-white shadow-2xl rounded max-w-sm  flex flex-col gap-4 items-center'>
+      <div className='p-4 bg-white dark:bg-gray-800 shadow-2xl rounded max-w-sm  flex flex-col gap-4 items-center'>
         <h2 className='text-2xl font-semibold'>Today's Dad Joke</h2>
         <p className='text-center max-w-xs'> {loading ? "...Loading" : joke}</p>
         <button className='w-full text-center rounded p-2 bg-teal-900 text-white hover:bg-teal-800 transition' onClick={handleNewJoke}>Get A New One</button>
