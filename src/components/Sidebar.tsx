@@ -3,7 +3,8 @@ type ChapterKey = 'ComponentComposition' | 'UseState' | 'UseEffect';
 const chapters : {key:ChapterKey,label:string}[] = [
   {key:"ComponentComposition", label:" Component Composition"},
   {key:"UseState", label:" useState"},
-  {key:"UseEffect", label:" useEffect"}
+  {key:"UseEffect", label:" useEffect"},
+  {key:"UseContext", label:" useContext"}
 ]
 
 export default function Sidebar({selectedChapter, setChapter} : {selectedChapter: string, setChapter: any}) {
