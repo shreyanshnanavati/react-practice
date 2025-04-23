@@ -19,7 +19,8 @@ export default function Sidebar() {
       <div className="flex flex-col gap-2">
         {chapters.map(({ key, label }) => {
           return (
-            <NavLink to={`${key}`}>{label}</NavLink>
+            <NavLink to={`${key}`} className={({ isActive }) =>
+              isActive ? "p-4 bg-blue-500 dark:bg-blue-400 rounded text-white" : "p-4 bg-blue-400 dark:bg-blue-500 rounded text-white"}>{label}</NavLink>
             // <div key={key} className={`p-4 ${key === selectedChapter ? "bg-blue-500 dark:bg-blue-400" : "bg-blue-500 dark:bg-blue-500"} rounded hover:bg-blue-600 transition text-white`} onClick={() => setChapter(key)}>{label}</div>
           );
         })}
