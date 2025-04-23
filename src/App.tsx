@@ -1,34 +1,26 @@
 import "./App.css";
-import Navbar from "./components/Navbar";
-import Sidebar from "./components/Sidebar";
-import MainContent from "./components/MainContent";
-import { useEffect, useState } from "react";
-import { ThemeContext } from './context/ThemeContext';
+import { BrowserRouter, Route, Routes } from "react-router";
+import MainLayout from "./layouts/MainLayout";
+import FlashcardHome from './pages/FlashcardApp/Home';
+import Home from './pages/Home';
+import ComponentComposition from './pages/ComponentComposition';
+import UseState from './pages/UseState';
+import UseEffect from './pages/UseEffect';
+import UseContext from './pages/UseContext';
 function App() {
-  const [chapter, setChapter] = useState("ComponentComposition");
-  const [theme,setTheme] = useState('light')
-
-  useEffect(() => {
-    const root = window.document.documentElement;
-    if (theme === "dark") {
-      root.classList.add("dark");
-    } else {
-      root.classList.remove("dark");
-    }
-  }, [theme]);
-
   return (
-      <ThemeContext.Provider value={{theme,setTheme}}>
-      <div>
-        <div className="min-h-screen flex flex-col">
-          <Navbar />
-          <div className="flex flex-1">
-            <Sidebar selectedChapter={chapter} setChapter={setChapter} />
-            <MainContent selectedChapter={chapter} />
-          </div>
-        </div>
-      </div>
-      </ThemeContext.Provider>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<MainLayout />}>
+          <Route index element={<Home/>}></Route>
+          <Route path='/flashcards' element={<FlashcardHome/>}></Route>
+          <Route path='/component-composition' element={<ComponentComposition/>}></Route>
+          <Route path='/use-state' element={<UseState/>}></Route>
+          <Route path='/use-effect' element={<UseEffect/>}></Route>
+          <Route path='/use-context' element={<UseContext/>}></Route>
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
