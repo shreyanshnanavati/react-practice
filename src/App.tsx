@@ -1,7 +1,7 @@
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router";
 import MainLayout from "./layouts/MainLayout";
-import FlashcardHome from './pages/FlashcardApp/Home';
+import HabitTracker from './pages/HabitTracker/Home';
 import Home from './pages/Home';
 import ComponentComposition from './pages/ComponentComposition';
 import UseState from './pages/UseState';
@@ -13,7 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<MainLayout />}>
           <Route index element={<Home/>}></Route>
-          <Route path='/flashcards' element={<FlashcardHome/>}></Route>
+          <Route path='/flashcards' element={<HabitTracker/>}></Route>
           <Route path='/component-composition' element={<ComponentComposition/>}></Route>
           <Route path='/use-state' element={<UseState/>}></Route>
           <Route path='/use-effect' element={<UseEffect/>}></Route>
