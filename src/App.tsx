@@ -8,6 +8,7 @@ import UseState from './pages/UseState';
 import UseEffect from './pages/UseEffect';
 import UseContext from './pages/UseContext';
 import UseRef from './pages/UseRef';
+import SearchInput from './pages/SearchInput';
 function App() {
   return (
     <BrowserRouter>
@@ -20,6 +21,7 @@ function App() {
           <Route path='/use-effect' element={<UseEffect/>}></Route>
           <Route path='/use-context' element={<UseContext/>}></Route>
           <Route path='/use-ref' element={<UseRef/>}></Route>
+          <Route path='/search-input' element={<SearchInput/>}></Route>
         </Route>
       </Routes>
     </BrowserRouter>

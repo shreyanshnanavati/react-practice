@@ -13,6 +13,7 @@ const chapters: { key: ChapterKey; label: string }[] = [
   { key: "use-effect", label: "useEffect" },
   { key: "use-context", label: "useContext" },
   { key: "use-ref", label: "useRef" },
+  { key: "search-input", label: "searchInput" },
 ];
 
 export default function Sidebar() {

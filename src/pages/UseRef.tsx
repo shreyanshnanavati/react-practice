@@ -38,15 +38,15 @@ export default function UseRef() {
 
   return (
     <div>
-      <div className="bg-red-200 h-screen flex justify-center items-center">
-        <div className="bg-red-300 p-4 flex flex-col items-center rounded-lg shadow-md">
+      <div className=" h-screen flex justify-center items-center">
+        <div className=" p-4 flex flex-col items-center rounded-lg shadow-md bg-white dark:bg-gray-800">
           <h1 className="text-6xl">{formattedTime(time)}</h1>
           <div className='flex gap-4 mt-2'>
-            <button className="p-2 bg-red-500 text-white rounded" onClick={handleStartTimer}>{ isRunning ? "Start" : "Resume"}</button>
-            <button className="p-2 bg-red-500 text-white rounded" onClick={handlePauseTimer}>
+            <button className="p-2 bg-blue-600 text-white rounded" onClick={handleStartTimer}>{ isRunning ? "Start" : "Resume"}</button>
+            <button className="p-2 bg-blue-600 text-white rounded" onClick={handlePauseTimer}>
               Pause
             </button>
-            <button className="p-2 bg-red-500 text-white rounded" onClick={handleResetTimer}>Reset</button>
+            <button className="p-2 bg-blue-600 text-white rounded" onClick={handleResetTimer}>Reset</button>
           </div>
         </div>
       </div>
