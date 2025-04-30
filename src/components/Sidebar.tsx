@@ -4,13 +4,15 @@ type ChapterKey =
   | "ComponentComposition"
   | "UseState"
   | "UseEffect"
-  | "UseContext";
+  | "UseContext"
+  | "UseRef";
 
 const chapters: { key: ChapterKey; label: string }[] = [
   { key: "component-composition", label: " Component Composition" },
   { key: "use-state", label: "useState" },
   { key: "use-effect", label: "useEffect" },
   { key: "use-context", label: "useContext" },
+  { key: "use-ref", label: "useRef" },
 ];
 
 export default function Sidebar() {

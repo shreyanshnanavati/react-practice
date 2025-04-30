@@ -7,6 +7,7 @@ import ComponentComposition from './pages/ComponentComposition';
 import UseState from './pages/UseState';
 import UseEffect from './pages/UseEffect';
 import UseContext from './pages/UseContext';
+import UseRef from './pages/UseRef';
 function App() {
   return (
     <BrowserRouter>
@@ -18,6 +19,7 @@ function App() {
           <Route path='/use-state' element={<UseState/>}></Route>
           <Route path='/use-effect' element={<UseEffect/>}></Route>
           <Route path='/use-context' element={<UseContext/>}></Route>
+          <Route path='/use-ref' element={<UseRef/>}></Route>
         </Route>
       </Routes>
     </BrowserRouter>
